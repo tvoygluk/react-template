@@ -14,9 +14,6 @@ const Dependencies = (props) => {
                 <ul>
                     <li><span>react-router-dom</span></li>
                     <li><span>node-sass</span></li>
-                    <li><span>react-redux</span></li>
-                    <li><span>redux</span></li>
-                    <li><span>redux-thunk</span></li>
                 </ul>
             </div>
 
