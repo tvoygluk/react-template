@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./hoc/Layout/Layout";
+import SecondMain from "./containers/SecondMain/SecondMain";
+import FirstMain from "./containers/FirstMain/FirstMain";
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = (props) => {
+
+  const routes = (
+      <Switch>
+
+        <Route path='/second' component={SecondMain} />
+
+        <Route path='/' exact component={FirstMain} />
+
+        <Redirect to='/' />
+
+      </Switch>
   );
-}
+
+    return (
+        <BrowserRouter>
+            <Layout>
+              { routes }
+            </Layout>
+        </BrowserRouter>
+    );
+};
 
 export default App;
