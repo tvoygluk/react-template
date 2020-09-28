@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Header.module.scss'
 
-const Header = (props) => {
+const Header = () => {
     const cls = [classes.Header];
 
     return (

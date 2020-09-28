@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Dependencies.module.scss'
 import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 
-const Dependencies = (props) => {
+const Dependencies = () => {
     const cls = [classes.Dependencies];
 
     return (
@@ -17,6 +17,7 @@ const Dependencies = (props) => {
                     <li><span>react-redux</span></li>
                     <li><span>redux</span></li>
                     <li><span>redux-thunk</span></li>
+                    <li><span>axios</span></li>
                 </ul>
             </div>
 

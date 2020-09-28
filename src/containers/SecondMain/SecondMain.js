@@ -3,7 +3,7 @@ import classes from './SecondMain.module.scss'
 import Dependencies from "../../components/Dependencies/Dependencies";
 import {Link} from "react-router-dom";
 
-const SecondMain = (props) => {
+const SecondMain = () => {
     const cls = [classes.SecondMain];
 
     return (

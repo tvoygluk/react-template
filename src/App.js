@@ -2,29 +2,27 @@ import React from 'react';
 import Layout from "./hoc/Layout/Layout";
 import SecondMain from "./containers/SecondMain/SecondMain";
 import FirstMain from "./containers/FirstMain/FirstMain";
-import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch, withRouter} from "react-router-dom";
 
-const App = (props) => {
+const App = () => {
 
-  const routes = (
-      <Switch>
+    const routes = (
+        <Switch>
 
-        <Route path='/second' component={SecondMain} />
+            <Route path='/second' component={SecondMain} />
 
-        <Route path='/' exact component={FirstMain} />
+            <Route path='/' exact component={FirstMain} />
 
-        <Redirect to='/' />
+            <Redirect to='/' />
 
-      </Switch>
-  );
+        </Switch>
+    );
 
     return (
-        <BrowserRouter>
-            <Layout>
-              { routes }
-            </Layout>
-        </BrowserRouter>
+        <Layout>
+          { routes }
+        </Layout>
     );
 };
 
-export default App;
+export default withRouter(App);

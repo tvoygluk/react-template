@@ -7,7 +7,6 @@ const Layout = props => {
 
     return (
         <div className={classes.Layout}>
-
             <Header />
 
             <h1>With Redux</h1>
@@ -17,7 +16,6 @@ const Layout = props => {
             </main>
 
             <Footer />
-
         </div>
     );
 };
