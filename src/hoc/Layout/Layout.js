@@ -10,7 +10,7 @@ const Layout = props => {
 
             <Header />
 
-            <h1>Without Redux branch</h1>
+            <h1>With Redux</h1>
 
             <main>
                 {props.children}
